@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+  
+  --color-background: #020617;
+  --color-foreground: #f8fafc;
+  
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-input: rgba(255, 255, 255, 0.05);
+  --color-ring: #6366f1;
+  
+  --color-primary: #6366f1;
+  --color-primary-foreground: #ffffff;
+  
+  --color-secondary: #1e293b;
+  --color-secondary-foreground: #f8fafc;
+  
+  --color-destructive: #ef4444;
+  --color-destructive-foreground: #ffffff;
+  
+  --color-muted: #334155;
+  --color-muted-foreground: #94a3b8;
+  
+  --color-accent: #0ea5e9;
+  --color-accent-foreground: #ffffff;
+  
+  --color-popover: #0f172a;
+  --color-popover-foreground: #f8fafc;
+  
+  --color-card: rgba(15, 23, 42, 0.6);
+  --color-card-foreground: #f8fafc;
+  
+  --color-success: #10b981;
+  --color-success-foreground: #ffffff;
+  
+  --color-warning: #f59e0b;
+  --color-warning-foreground: #ffffff;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  overflow-x: hidden;
+}
+
+/* Custom glass utilities */
+.glass-panel {
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-panel-hover:hover {
+  background: rgba(30, 41, 59, 0.5);
+  border-color: rgba(99, 102, 241, 0.3);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.7);
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(2, 6, 23, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(99, 102, 241, 0.2);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(99, 102, 241, 0.5);
+}
+
+/* Pulse animation adjustments */
+.glow-success {
+  box-shadow: 0 0 15px rgba(16, 185, 129, 0.15);
+}
+
+.glow-warning {
+  box-shadow: 0 0 15px rgba(245, 158, 11, 0.15);
+}
+
+.glow-critical {
+  box-shadow: 0 0 15px rgba(239, 68, 68, 0.15);
+}
+
